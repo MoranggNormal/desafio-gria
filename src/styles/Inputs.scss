@@ -1,0 +1,54 @@
+input{
+  background: #FFFFFF;
+  border-radius: 4px 4px 0 0;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  padding: 5px 17px 0 15px;
+  width: 90%;
+  height: 52px;
+}
+
+button{
+  border: 0;
+  outline: 0;
+  width: 90%;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: #1071E6;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:disabled{
+    background: #ccc;
+    cursor: default;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  input, button{
+    width: 90%;
+    height: 35px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  input, button{
+    width: 90%;
+    height: 38px;
+  }
+
+}
+
+@media only screen and (min-width: 2560px) {
+
+  input, button{
+    width: 90%;
+    height: 63px;
+    font-size: 25px;
+  }
+
+
+}

@@ -1,38 +1,284 @@
+.is-desktop{
+  display: none;
+}
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  background: #FFFFFF;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 350px;
+  width: 430px;
+  line-height: 20px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+  p{
+    max-width: 75%;
+  }
+
+  img{
+    width: 60px;
+  }
+}
+
+
+
+.prev-page{
+  position: absolute;
+  top: 40px;
+  left: 10%;
+  color: #9B51E0;
+  font-weight: 400;
+  font-size: 24px;
+  display: flex;
+  z-index: 10;
+
+  img{
+    margin-right: 4px;
+    width: 25px;
+    color: #9B51E0;
+  }
+}
+
 .bg-form{
     background: #E5E5E5;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column wrap;
+    display: grid;
+    place-items: center;
+    position: relative;
+
 
     >div{
       display: flex;
+      justify-content: space-around;
+      margin-top: 102px;
+      width: 100%;
 
       h1{
         font-size: 25px;
         font-weight: 700;
         line-height: 24px;
         color: #5914DF;
-        font-family: 'Roboto', sans-serif;
       }
 
       h4{
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 400;
-        line-height: 20px;
+        line-height: 30px;
         color: #757171;
-        font-family: 'Roboto', sans-serif;
+      }
+
+      img{
+        width: 84px;
+
       }
     }
 
     form{
-      display: flex;
-      justify-content: space-around;
-      flex-flow: column wrap;
+      display: grid;
+      place-items: center;
+      width: 100%;
 
-      input, button{
-        margin: 30px;
+      input{
+        margin: 15px;
+        position: relative;
+      }
+
+      .is-invalid{
+        border: 1px solid red;
+      }
+
+      .is-valid{
+        border: 1px solid green;
+      }
+
+      >button{
+        margin: 23px 15px -15px 15px;
+      }
+
+      .no-bg{
+        background: transparent;
+        color: #1071E6;
       }
     }
+}
+
+@media only screen and (min-width: 375px) {
+  .prev-page{
+    top: 20px;
+    left: 10%;
+    font-size: 20px;
+
+    img{
+      width: 20px;
+    }
+  }
+
+  .bg-form{
+
+      >div{
+        margin-top: 90px;
+
+        h1{
+          font-size: 22px;
+        }
+
+        h4{
+          font-size: 10px;
+
+        }
+
+        img{
+          width: 64px;
+
+        }
+      }
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+
+  .prev-page{
+    top: 20px;
+    left: 10%;
+    color: #9B51E0;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+
+    img{
+      margin-right: 4px;
+      width: 25px;
+      color: #9B51E0;
+    }
+  }
+
+
+  .bg-form{
+    background: #F5F0FD;
+      width: 55vw;
+      height: 80vh;
+      border-radius: 30px;
+      display: block;
+
+
+      >div{
+        width: 100%;
+
+        div{
+          margin-top: 30px;
+
+          h1{
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #5914DF;
+          }
+
+          h4{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #757171;
+          }
+
+        }
+
+        >span{
+            display: grid;
+            place-items: center;
+
+        img{
+          width: 74px;
+
+        }
+      }
+
+
+      }
+      .no-bg{
+        border: 1px solid #1071E6;
+      }
+
+}
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+  .is-desktop{
+    width: 50%;
+    display: grid;
+    place-items: center;
+
+
+  }
+
+  .bg-form{
+    width: 28%;
+    height: 83%;
+
+    >div{
+        margin-top: 15px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 2560px) {
+
+  .is-desktop{
+    img{
+      width: 64%;
+    }
+  }
+
+  .bg-form{
+    background: #F5F0FD;
+      width: 30%;
+      height: 80vh;
+      border-radius: 30px;
+      display: grid;
+      place-items: center;
+
+
+      >div{
+        width: 100%;
+
+        div{
+
+          h1{
+            font-size: 45px;
+          }
+
+          h4{
+            font-size: 16px;
+          }
+
+        }
+
+        >span{
+          img{
+            width: 140px;
+        }
+      }
+
+
+      }
+      .no-bg{
+        border: 1px solid #1071E6;
+      }
+
+}
+
 }
