@@ -9,9 +9,27 @@
 body{
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
 
 
 body, input, button{
   font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  body{
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body, #root{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
 }
