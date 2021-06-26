@@ -5,7 +5,10 @@ import Modal from '../components/Modal'
 import GriaLogo from '../assets/images/logo.png'
 import LeftArrow from '../assets/images/left-arrow.svg'
 import Foto from '../assets/images/cadastro.png'
+<<<<<<< HEAD
 import sendSucessImg from '../assets/images/info.png'
+=======
+>>>>>>> 5ebeb94aeddc1e419f7910558666486f0a42ff4a
 
 import '../styles/SignUp.scss'
 
@@ -48,7 +51,10 @@ const SignUp = () => {
 
   function handleSubmit(e){
     e.preventDefault();
+<<<<<<< HEAD
     setModal(true)
+=======
+>>>>>>> 5ebeb94aeddc1e419f7910558666486f0a42ff4a
   }
 
   return (
@@ -129,7 +135,11 @@ const SignUp = () => {
 
       <Button
       type="submit"
+<<<<<<< HEAD
       disabled={(!email || !validateCpf || !validPass) && "false"}
+=======
+      disabled={(!email || !validateCpf) ? "true" : "false"}
+>>>>>>> 5ebeb94aeddc1e419f7910558666486f0a42ff4a
       >CADASTRAR</Button>
 
       <Button
